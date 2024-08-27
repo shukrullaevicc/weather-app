@@ -1,0 +1,4 @@
+#theme-toggle:checked + label{
+   transition: 0.3s;
+   left: calc(100% - 35px);
+}
