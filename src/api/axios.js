@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiInstance = axios.create({
-   baseURL: "https://api.weatherapi.com/v1",
+   baseURL: import.meta.env.VITE_BASE_URL,
    headers: {
       "Content-Type": "application/json",
    },
