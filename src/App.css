@@ -2,3 +2,23 @@
    transition: 0.3s;
    left: calc(100% - 35px);
 }
+
+[data-theme="dark"] h1{
+   color: white !important;
+}
+
+[data-theme="dark"] .checkbox{
+   border: 2px solid white;
+}
+
+[data-theme="dark"] .checkbox-label{
+   background-color: white;
+}
+
+[data-theme="dark"] .moon{
+   color: indigo;
+}
+
+.rot{
+   transform: rotate(-28deg);
+}
