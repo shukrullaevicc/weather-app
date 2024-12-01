@@ -12,8 +12,8 @@ const Indicators = () => {
    const data = useSelector((state => state.searchCity));
    if(!data) return 
 
-   const date = data.forecast.forecastday.map(day => day.date.split("-")[2]) // Date
-   const temp = data.forecast.forecastday.map(day => day.day.maxtemp_c) // Temperature
+   const date = data.forecast.forecastday.map(day => day.date.split("-")[2])
+   const temp = data.forecast.forecastday.map(day => day.day.maxtemp_c)
 
    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -33,7 +33,6 @@ const Indicators = () => {
   return (
    <Container>
       <div className="flex flex-col lg:flex-row gap-5 lg:justify-between">
-         {/* Humidity and sunrise/sunset */}
          <div className="max-w-full lg:max-w-[380px] w-full flex flex-col gap-5">
             <div className="bg-white shadow-3xl flex-1 max-h-[250px] grid grid-cols-2 grid-rows-2 rounded-xl p-5 drop-shadow-lg">
                
@@ -80,9 +79,9 @@ const Indicators = () => {
                      </strong>
                   </p>
                </div>
+               
             </div>
 
-            {/* Pressure and wind direction */}
             <div className="flex flex-1 items-center gap-4 bg-white px-5 py-4 rounded-xl bg-linear-color drop-shadow-lg">
                <div className="flex-1 flex items-center justify-center aspect-square rounded-full bg-white bg-pressure bg-center bg-no-repeat bg-cover text-[14px] font-bold">
                   {data.current.pressure_mb + "Pa"}
@@ -93,7 +92,6 @@ const Indicators = () => {
             </div>
          </div>
 
-         {/* Temperature and weather chart */}
          <div className="flex flex-1 flex-col gap-4 bg-white rounded-xl p-4 md:p-7 max-w-full lg:max-w-[780px] drop-shadow-lg">
             <Line data={chartData} />
             <div>

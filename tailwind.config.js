@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "light" : "url('./src/images/Light.jpg')",
-        "night" : "url('./src/images/Night.jpeg')",
+        "light" : "url('./src/images/light.jpg')",
+        "night" : "url('./src/images/night.jpeg')",
         "pressure" : "url('./src/images/pressure.jpg')",
         "compass" : "url('./src/images/compass.png')",
         "arrow" : "url('./src/images/arrow.png')",
