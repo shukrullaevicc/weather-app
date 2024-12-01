@@ -12,33 +12,26 @@ import { useDispatch, useSelector } from 'react-redux';
 function Header() {
    const dispatch = useDispatch();
    const [city, setCity] = useState('');
-
    const theme = useSelector((state => state.theme));
 
-
-   // Load weather data
    async function loadData() {
       try{
          const response = await axios(`forecast.json?key=644f6ce0ca9e401ebb891832211707&q=${city ? city : 'Tashkent'}&days=7&aqi=yes&alerts=yes`);
          const data = response.data;
-
          setCity('');
-
          dispatch({type: 'SEARCH_CITY', data});
-      }catch(error){
+      }
+      catch(error){
          console.log(error);
       }
    }
 
-   // Get weather data
    const handleSearchCity = async (e) => {
       e.preventDefault();
-
       loadData();
    }
 
    useEffect(() => {
-
       loadData();
    }, [])
 

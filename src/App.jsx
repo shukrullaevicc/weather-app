@@ -9,7 +9,7 @@ function App() {
   const theme = useSelector((state => state.theme))
 
   return (
-    <div data-theme={theme} className={theme === "dark" ? "bg-linear-color" : "bg-white"}>
+    <div data-theme={theme} className={theme === "dark" ? "bg-black" : "bg-white"}>
       <Header/>
       <Banner/>
       <Map/>
